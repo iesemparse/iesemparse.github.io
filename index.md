@@ -1,3 +1,1 @@
-# Infotabs
-
 Coming soon
