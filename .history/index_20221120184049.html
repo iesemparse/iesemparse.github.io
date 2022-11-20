@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="UTF-8">
+		<title>IndicXNLI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#157879">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/cayman.css">
+	</head>
+	<body>
+		<section class="page-header">
+			<h1><img src="" style="max-width:40%;"></h1>
+			<a href="" class="btn">Paper</a>
+			<a href="" class="btn">Dataset</a>
+			<a href="" class="btn">Code</a> 
+			<a href="" class="btn">Video</a>
+			<a href="" class="btn">PPT</a><br>
+			<a href="https://tabpert.github.io" class="btn">TabPert</a>
+		</section>
+		<section class="main-content">
+			<h1>Inference on Tables as Semi-structured Data</h1>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2><p style="text-align: justify;"> Understanding ubiquitous semi-structured tabulated data requires not only comprehending the meaning of text fragments, but also implicit relationships between them. We argue that such data can prove as a testing ground for understanding how we reason about information. To study this, we introduce a new dataset called INFOTABS, comprising of human-written textual hypotheses based on premises that are tables extracted from Wikipedia info-boxes. Our analysis shows that the semi-structured, multi-domain and heterogeneous nature of the premises admits complex, multi-faceted reasoning.</p> <p style="text-align: justify;">tldr: INFOTABS is a Semi-structured inference dataset with wikipedia Infobox tables as premise and human written statements as hypothesis.<p>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Procedure</h2>
+			<p style="text-align: justify;">We use Amazon Mechanical Turk (<a href="https://www.mturk.com/">mturk</a>) for data collection and validation. Annotators were presented with a tabular premise (infobox tables) and instructed to write three self-contained grammatical sentences based on the tables: one of which is true given the table, one which is false, and one which may or may not be true. We provide detailed instructions with illustrative examples using a table and also general principles to bear in mind (refer to <a href="annotation-template.html">template</a>). For each premise-hypothesis in the development and the test sets, we also asked five turkers to predict whether the hypothesis is entailed or contradicted by, or is unrelated to the premise table for development and the three test splits (refer to <a href="validation-template.html">template</a>).</p>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+			<p style="text-align: justify; display:inline;">Below is an inference example from the INFOTABS dataset. On the right is a premise which is a table extracted from wikipedia infobox. On the left are hypotheses written by human annotators. Here, colors <p style='color:green;display:inline;'>'green'</p>, <p style='color:darkgray;display:inline;'>'gray'</p>, and <p style='color:red;display:inline;'>'red'</p> represent true (i.e., entailment), maybe true (i.e., neutral) and false (i.e., contradiction) statements, respectively.</p>
+			<p style="margin-left:10%; margin-right:10%;"><img src="figures/example.jpeg" style="max-width:95%;"></p>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reasoning</h2>
+			<p style="text-align: justify;">To study the nature of reasoning that is involved in deciding the relationship between a table and a hypothesis, we adapted the set of reasoning categories from <a href="https://gluebenchmark.com">GLUE Benchmark</a> to table premises. All definitions and their boundaries were verified with several rounds of discussions. Following this, three graduate students (authors of the paper) independently annotated 160 pairs from the dev and alpha 3 test sets each, and edge cases were adjudicated to arrive at consensus labels.</p>
+			<figure>
+				<img src="figures/reasoning.png" style="max-width:100%;">
+				<figcaption>Type and counts of reasoning in the Development and test alpha3 data splits. OOT and KCS are short forms of out-of-table and Knowledge & Common Sense, respectively.
+				</figcaption>
+			</figure>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset Statistics</h2>
+			<p style="text-align: justify;">Our dataset consists of five splits (train, dev, alpha one, alpha two and alpha three). Below we provide basic statistics of data, i.e., number of tables and table-sentence pairs in each of the data splits. We also performed a validation step with five annotators for inter annotator agreement for all splits except the training set.</p>
+			<div>
+				<table  style="margin-left:15%;
+					margin-right:15%;">
+					<thead>
+						<tr>
+							<th>Data Split</th>
+							<th>Number of Tables</th>
+							<th>Number of Pairs</th>
+						</tr>
+					</thead>
+					<tbody align="center">
+						<tr>
+							<td>Train</td>
+							<td>1740</td>
+							<td>16538</td>
+						</tr>
+						<tr>
+							<td>Dev</td>
+							<td>200</td>
+							<td>1800</td>
+						</tr>
+						<tr>
+							<td>alpha 1</td>
+							<td>200</td>
+							<td>1800</td>
+						</tr>
+						<tr>
+							<td>alpha 2</td>
+							<td>200</td>
+							<td>1800</td>
+						</tr>
+						<tr>
+							<td>alpha 3</td>
+							<td>200</td>
+							<td>1800</td>
+						</tr>
+					</tbody>
+					<caption>Number of tables and premise-hypothesis
+					pairs for each data split</caption>
+				</table>
+			</div>
+			<br><br>
+			<div style="text-align:center;">
+				<table>
+					<thead>
+						<tr>
+							<th>Data Split</th>
+							<th>Cohen's Kappa</th>
+							<th>Human Performance</th>
+							<th>Majority Agreeement</th>
+						</tr>
+					</thead>
+					<tbody align="center">
+						<tr>
+							<td>Dev</td>
+							<td>0.78</td>
+							<td>79.78</td>
+							<td>93.53</td>
+						</tr>
+						<tr>
+							<td>alpha 1</td>
+							<td>0.80</td>
+							<td>84.04</td>
+							<td>97.48</td>
+						</tr>
+						<tr>
+							<td>alpha 2</td>
+							<td>0.80</td>
+							<td>83.88</td>
+							<td>96.77</td>
+						</tr>
+						<tr>
+							<td>alpha 3</td>
+							<td>0.74</td>
+							<td>79.33</td>
+							<td>95.58</td>
+						</tr>
+					</tbody>
+					<caption>Cohen's Kappa, human baseline and inter-annotator agreement scores</caption>
+				</table>
+			</div>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Knowledge + InfoTabS</h2>
+			<p style="text-align: justify;"> You should check our <a href="https://2021.naacl.org/">NAACL 2021</a> paper which <a href="https://knowledge-infotabs.github.io">enhance InfoTabS</a> with extra Knowledge.</p>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>TabPert</h2>
+			<p style="text-align: justify;"> You should check our <a href="https://2021.emnlp.org">EMNLP 2021</a> paper which is a <a href="https://tabpert.github.io">tabular perturbation platform</a> to generate counterfactual examples.</p>
+
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>People</h2>
+			<p style="text-align: justify;"> The INFOTABS dataset is prepared at the <a href="https://www.cs.utah.edu/"> School of Computing</a> of <a href="https://www.cs.utah.edu/">University of Utah</a> by the following people: </p>
+			<figure>
+				<img src="figures/vivekg.jpg" style="width:25%;">
+				<img src="figures/maitrey.jpeg" style="width:25%;">
+				<img src="figures/pegah.png" style="width:21%;">
+				<img src="figures/viveks.jpg" style="width:23%;">
+				<figcaption>From left to right, <a href="https://vgupta123.github.io">Vivek Gupta</a>, <a href="https://sites.google.com/view/maitreymehta/home">Maitrey Mehta</a>, <a href="https://sites.google.com/view/pnokhiz/home">Pegah Nokhiz</a> and <a href="https://svivek.com/">Vivek Srikumar</a>. </figcaption>
+			</figure>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Citation</h2>
+			<p style="text-align: justify;"> Please cite our paper as below if you use the INFOTABS dataset.</p>
+			<pre><code>@inproceedings{gupta-etal-2020-infotabs,
+    title = "{INFOTABS}: Inference on Tables as Semi-structured Data",
+    author = "Gupta, Vivek  and
+      Mehta, Maitrey  and
+      Nokhiz, Pegah  and
+      Srikumar, Vivek",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.210",
+    pages = "2309--2324",
+    abstract = "In this paper, we observe that semi-structured tabulated text is ubiquitous; understanding them requires not only comprehending the meaning of text fragments, but also implicit relationships between them. We argue that such data can prove as a testing ground for understanding how we reason about information. To study this, we introduce a new dataset called INFOTABS, comprising of human-written textual hypotheses based on premises that are tables extracted from Wikipedia info-boxes. Our analysis shows that the semi-structured, multi-domain and heterogeneous nature of the premises admits complex, multi-faceted reasoning. Experiments reveal that, while human annotators agree on the relationships between a table-hypothesis pair, several standard modeling strategies are unsuccessful at the task, suggesting that reasoning about tables can pose a difficult modeling challenge.",
+}</code></pre>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgement</h2>
+			<p style="text-align: justify;">Authors thank members of the <a href="https://svivek.com/">Utah NLP group</a> for their valuable insights and
+			suggestions at various stages of the project; and <a href="https://acl2020.org/">ACL 2020</a> reviewers for pointers to
+			related works, corrections, and helpful comments. Authors thank the largest free resource <a href="https://en.wikipedia.org/wiki/Main_Page"> Wikipedia</a> for InfoTabS tables. We are also indebted to the
+			many anonymous <a href="https://www.mturk.com/"> Turkers</a> who helped craft the dataset.  We acknowledge the support
+			of the support of NSF Grants No. 1822877 and 1801446, and a generous gift from
+			<a href="https://research.google/" >Google</a>.</p>
+			<footer class="site-footer">
+				<span class="site-footer-owner"><a href="https://infotabs.github.io">INFOTABS</a> is maintained by <a href="https://vgupta123.github.io">Vivek Gupta</a>.</span>
+				<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman</a> theme by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
+			</footer>
+		</section>
+	</body>
+</html>
