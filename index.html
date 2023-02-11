@@ -12,7 +12,7 @@
 	<body>
 		<section class="page-header">
 			<h1><img src="figures/IndicXNLI_logo.png" style="max-width:40%;"></h1>
-			<a href="https://arxiv.org/abs/2204.08776" class="btn" target="_blank">Paper</a>
+			<a href="https://aclanthology.org/2022.emnlp-main.755/" class="btn" target="_blank">Paper</a>
 			<a href="https://github.com/divyanshuaggarwal/IndicXNLI" class="btn" target="_blank">Code</a>
 			<a href="https://huggingface.co/datasets/Divyanshu/indicxnli" class="btn" target="_blank">Dataset</a>
 			<a href="https://github.com/IndicXNLI/indicxnli.github.io/blob/master/data/EMNLP%20IndicXNLI%20poster.pdf" class="btn" target="_blank">Poster</a> 
@@ -29,19 +29,24 @@
 				<img src="figures/divyanshu.jpg" style="max-width:22%;">
 				<img src="figures/vivekg.jpg" style="width:25%;">
 				<img src="figures/anoop.jpeg" style="width:25%;">
-				<figcaption>From left to right, <a href="https://www.linkedin.com/in/divyanshu-aggarwal-498894163/">Divyanshu Aggarwal</a>, <a href="https://vgupta123.github.io">Vivek Gupta</a>, <a href="http://anoopk.in/">Anoop Kunchukuttan</a> </figcaption>
+				<figcaption>From left to right, <a href="https://divyanshuaggarwal.github.io/">Divyanshu Aggarwal</a>, <a href="https://vgupta123.github.io">Vivek Gupta</a>, <a href="http://anoopk.in/">Anoop Kunchukuttan</a> </figcaption>
 			</figure>
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Citation</h2>
 			<p style="text-align: justify;"> Please cite our paper as below.</p>
-			<pre><code>@misc{https://doi.org/10.48550/arxiv.2204.08776,
-doi = {10.48550/ARXIV.2204.08776},
-url = {https://arxiv.org/abs/2204.08776},
-author = {Aggarwal, Divyanshu and Gupta, Vivek and Kunchukuttan, Anoop},
-keywords = {Computation and Language (cs.CL), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
-title = {IndicXNLI: Evaluating Multilingual Inference for Indian Languages},
-publisher = {arXiv},
-year = {2022},
-copyright = {Creative Commons Attribution 4.0 International}
+			<pre><code>@inproceedings{aggarwal-etal-2022-indicxnli,
+    title = "{I}ndic{XNLI}: Evaluating Multilingual Inference for {I}ndian Languages",
+    author = "Aggarwal, Divyanshu  and
+      Gupta, Vivek  and
+      Kunchukuttan, Anoop",
+    booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2022",
+    address = "Abu Dhabi, United Arab Emirates",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.emnlp-main.755",
+    pages = "10994--11006",
+    abstract = "While Indic NLP has made rapid advances recently in terms of the availability of corpora and pre-trained models, benchmark datasets on standard NLU tasks are limited. To this end, we introduce INDICXNLI, an NLI dataset for 11 Indic languages. It has been created by high-quality machine translation of the original English XNLI dataset and our analysis attests to the quality of INDICXNLI. By finetuning different pre-trained LMs on this INDICXNLI, we analyze various cross-lingual transfer techniques with respect to the impact of the choice of language models, languages, multi-linguality, mix-language input, etc. These experiments provide us with useful insights into the behaviour of pre-trained models for a diverse set of languages.",
+}
 			</code></pre>
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgement</h2>
 			<p style="text-align: justify;">Authors thank members of the <a href="https://svivek.com/">Utah NLP group</a> for their valuable insights and suggestions at various stages of the project, and reviewers for their helpful comments. Additionally, we appreciate the inputs provided by Vivek Srikumar and Ellen Riloff. Vivek Gupta acknowledges support from Bloomberg's Data Science Ph.D. Fellowship.</p>
