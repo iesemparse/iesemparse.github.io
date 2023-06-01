@@ -2,7 +2,7 @@
 <html lang="en-us">
 	<head>
 		<meta charset="UTF-8">
-		<title>IndicXNLI</title>
+		<title>IE-SemParse</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="theme-color" content="#157879">
 		<link rel="stylesheet" href="css/normalize.css">
@@ -11,20 +11,20 @@
 	</head>
 	<body>
 		<section class="page-header">
-			<h1><img src="figures/IndicXNLI_logo.png" style="max-width:40%;"></h1>
-			<a href="https://aclanthology.org/2022.emnlp-main.755/" class="btn" target="_blank">Paper</a>
-			<a href="https://github.com/divyanshuaggarwal/IndicXNLI" class="btn" target="_blank">Code</a>
-			<a href="https://huggingface.co/datasets/Divyanshu/indicxnli" class="btn" target="_blank">Dataset</a>
+			<h1><img src="figures/ie-semparse-logo-transformed.jpeg" style="max-width:200%;"></h1>
+			<a href="https://arxiv.org/abs/2304.13005" class="btn" target="_blank">Paper</a>
+			<a href="https://github.com/divyanshuaggarwal/Indic-SemParse" class="btn" target="_blank">Code</a>
+			<a href="https://huggingface.co/datasets/Divyanshu/Indic-SemParse" class="btn" target="_blank">Dataset</a>
 			<a href="https://github.com/IndicXNLI/indicxnli.github.io/blob/master/data/EMNLP%20IndicXNLI%20poster.pdf" class="btn" target="_blank">Poster</a> 
 			<a href="https://www.youtube.com/watch?v=IIdrm40nNv4" class="btn" target="_blank">Video</a>
 			<a href="https://github.com/IndicXNLI/indicxnli.github.io/blob/master/data/IndicXNLI%20PPT.pdf" class="btn" target="_blank">PPT</a><br>
 		</section>
 		<section class="main-content">
-			<h1>IndicXNLI: Evaluating Multilingual NLI for Indian Languages</h1>
-			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2><p style="text-align: justify;"> While Indic NLP has made rapid advances recently in terms of the availability of corpora and pre-trained models, benchmark datasets on standard NLU tasks are limited. To this end, we introduce IndicXNLI, an NLI dataset for 11 Indic languages. It has been created by high-quality machine translation of the original English XNLI dataset and our analysis attests to the quality of IndicXNLI. By finetuning different pre-trained LMs on this IndicXNLI, we analyze various cross-lingual transfer techniques with respect to the impact of the choice of language models, languages,  multi-linguality, mix-language input, etc. These experiments provide us with useful insights into the behaviour of pre-trained models for a diverse set of languages. </p> <p style="text-align: justify;">tldr: INDICXNLI is an NLI dataset for 11 Indian languages. We investigate the impact of different finetuning strategies, languages, multi-linguality and mixed-language input on various pre-trained language models using the dataset. <p>
+			<h1>Evaluating Inter-Bilingual Semantic Parsing for Indian Languages</h1>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2><p style="text-align: justify;"> Despite significant progress in Natural Language Generation for Indian languages (Indic-NLP), there is a lack of datasets around complex structured tasks such as semantic parsing. One reason for this imminent gap is the complexity of the logical form, which makes English to multilingual translation difficult. The process involves alignment of logical forms, intents and slots with translated unstructured utterance. To address this, we propose an Inter-bilingual Seq2seq Semantic parsing dataset IE-SEMPARSE for 11 distinct Indian languages. We highlight the proposed task’s practicality, and evaluate existing multilingual seq2seq models across several train-test strategies. Our experiment reveals a high correlation across performance of original multilingual semantic parsing datasets (such as mTOP, multilingual TOP and multiATIS++) and our proposed IE-SEMPARSE suite. <p>
 
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>People</h2>
-			<p style="text-align: justify;"> The following people have worked on the paper, <a href="">"IndicXNLI: Evaluating Multilingual NLI for Indian Languages"</a>:</p>
+			<p style="text-align: justify;"> The following people have worked on the paper, <a href="">"Evaluating Inter-Bilingual Semantic Parsing for Indian Languages"</a>:</p>
 			<figure>
 				<img src="figures/divyanshu.jpg" style="max-width:22%;">
 				<img src="figures/vivekg.jpg" style="width:25%;">
@@ -33,25 +33,12 @@
 			</figure>
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Citation</h2>
 			<p style="text-align: justify;"> Please cite our paper as below.</p>
-			<pre><code>@inproceedings{aggarwal-etal-2022-indicxnli,
-    title = "{I}ndic{XNLI}: Evaluating Multilingual Inference for {I}ndian Languages",
-    author = "Aggarwal, Divyanshu  and
-      Gupta, Vivek  and
-      Kunchukuttan, Anoop",
-    booktitle = "Proceedings of the 2022 Conference on Empirical Methods in Natural Language Processing",
-    month = dec,
-    year = "2022",
-    address = "Abu Dhabi, United Arab Emirates",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2022.emnlp-main.755",
-    pages = "10994--11006",
-    abstract = "While Indic NLP has made rapid advances recently in terms of the availability of corpora and pre-trained models, benchmark datasets on standard NLU tasks are limited. To this end, we introduce INDICXNLI, an NLI dataset for 11 Indic languages. It has been created by high-quality machine translation of the original English XNLI dataset and our analysis attests to the quality of INDICXNLI. By finetuning different pre-trained LMs on this INDICXNLI, we analyze various cross-lingual transfer techniques with respect to the impact of the choice of language models, languages, multi-linguality, mix-language input, etc. These experiments provide us with useful insights into the behaviour of pre-trained models for a diverse set of languages.",
-}
+			<pre><code>@inproceedings{}
 			</code></pre>
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgement</h2>
 			<p style="text-align: justify;">Authors thank members of the <a href="https://svivek.com/">Utah NLP group</a> for their valuable insights and suggestions at various stages of the project, and reviewers for their helpful comments. Additionally, we appreciate the inputs provided by Vivek Srikumar and Ellen Riloff. Vivek Gupta acknowledges support from Bloomberg's Data Science Ph.D. Fellowship.</p>
 			<footer class="site-footer">
-				<span class="site-footer-owner"><a href="https://indicxnli.github.io">IndicXNLI</a> is maintained by <a href="https://www.linkedin.com/in/divyanshu-aggarwal-498894163/">Divyanshu Aggarwal</a>.</span>
+				<span class="site-footer-owner"><a href="https://iesemparse.github.io">IE-SemParse</a> is maintained by <a href="https://www.linkedin.com/in/divyanshu-aggarwal-498894163/">Divyanshu Aggarwal</a>.</span>
 				<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman</a> theme by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
 			</footer>
 		</section>
