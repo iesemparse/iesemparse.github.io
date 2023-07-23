@@ -12,7 +12,7 @@
 	<body>
 		<section class="page-header">
 			<h1><img src="figures/ie-semparse-logo-transformed.jpeg" style="max-width:200%;"></h1>
-			<a href="https://aclanthology.org/2023.nlp4convai-1.13" class="btn" target="_blank">Paper</a>
+			<a href="https://aclanthology.org/2023.nlp4convai-1.9" class="btn" target="_blank">Paper</a>
 			<a href="https://github.com/divyanshuaggarwal/IE-SemParse" class="btn" target="_blank">Code</a>
 			<a href="https://huggingface.co/datasets/Divyanshu/IE-SemParse" class="btn" target="_blank">Dataset</a>
 			<a href="https://github.com/divyanshuaggarwal/IE-SemParse/blob/main/ACL%20Material/IE-Semparse-poster.pdf" class="btn" target="_blank">Poster</a> 
@@ -33,30 +33,26 @@
 			</figure>
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Citation</h2>
 			<p style="text-align: justify;"> Please cite our paper as below.</p>
-			<pre><code>@inproceedings{gupta-etal-2023-conversational,
-			title = "Conversational Recommendation as Retrieval: A Simple, Strong Baseline",
-			author = "Gupta, Raghav and
-			Aksitov, Renat and
-			Phatale, Samrat and
-			Chaudhary, Simral and
-			Lee, Harrison and
-			Rastogi, Abhinav",
+			<pre><code>@inproceedings{aggarwal-etal-2023-evaluating,
+			title = "Evaluating Inter-Bilingual Semantic Parsing for {I}ndian Languages",
+			author = "Aggarwal, Divyanshu and
+			Gupta, Vivek and
+			Kunchukuttan, Anoop",
 			booktitle = "Proceedings of the 5th Workshop on NLP for Conversational AI (NLP4ConvAI 2023)",
 			month = jul,
 			year = "2023",
 			address = "Toronto, Canada",
 			publisher = "Association for Computational Linguistics",
-			url = "https://aclanthology.org/2023.nlp4convai-1.13",
-			pages = "155--160",
-			abstract = "Conversational recommendation systems (CRS) aim to recommend suitable items to users through natural
-			language conversation. However, most CRS approaches do not effectively utilize the signal provided by these
-			conversations. They rely heavily on explicit external knowledge e.g., knowledge graphs to augment the models{'}
-			understanding of the items and attributes, which is quite hard to scale. To alleviate this, we propose an alternative
-			information retrieval (IR)-styled approach to the CRS item recommendation task, where we represent conversations as
-			queries and items as documents to be retrieved. We expand the document representation used for retrieval with
-			conversations from the training set. With a simple BM25-based retriever, we show that our task formulation compares
-			favorably with much more complex baselines using complex external knowledge on a popular CRS benchmark. We demonstrate
-			further improvements using user-centric modeling and data augmentation to counter the cold start problem for CRSs.",
+			url = "https://aclanthology.org/2023.nlp4convai-1.9",
+			pages = "102--122",
+			abstract = "Despite significant progress in Natural Language Generation for Indian languages (IndicNLP), there is a lack
+			of datasets around complex structured tasks such as semantic parsing. One reason for this imminent gap is the complexity
+			of the logical form, which makes English to multilingual translation difficult. The process involves alignment of
+			logical forms, intents and slots with translated unstructured utterance. To address this, we propose an Inter-bilingual
+			Seq2seq Semantic parsing dataset IE-SemParse Suite for 11 distinct Indian languages. We highlight the proposed task{'}s
+			practicality, and evaluate existing multilingual seq2seq models across several train-test strategies. Our experiment
+			reveals a high correlation across performance of original multilingual semantic parsing datasets (such as mTOP,
+			multilingual TOP and multiATIS++) and our proposed IE-SemParse suite.",
 			}
 			</code></pre>
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgement</h2>
